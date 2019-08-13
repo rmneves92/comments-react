@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 class newComment extends Component {
 
@@ -19,11 +19,11 @@ class newComment extends Component {
         })
     }
 
-    render(){
+    render() {
         return (
             <div>
-                <textarea onChange={this.handleChange} value={this.state.newComment}></textarea>
-                <button onClick={this.sendComment}>Enviar</button>
+                <textarea placeholder='Inserir comentário' className='form-control' onChange={this.handleChange} value={this.state.newComment}></textarea>
+                <button className='btn btn-success mt-2' onClick={this.sendComment}>Enviar</button>
             </div>
         )
     }

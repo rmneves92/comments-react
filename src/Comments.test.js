@@ -6,8 +6,8 @@ import Comment from './Comment'
 describe('<Comments />', () => {
     it('should render Comments', () => {
         const comments = {
-            a: { id: 'a', comment: 'Comment 1'},
-            b: { id: 'b', comment: 'Comment 2'},
+            a: { id: 'a', comment: 'Comment 1' },
+            b: { id: 'b', comment: 'Comment 2' },
         }
 
         const wrapper = shallow(<Comments comments={comments} />)

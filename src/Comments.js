@@ -1,13 +1,13 @@
 import React from 'react'
 import Comment from './Comment'
 
-const Comments = ({comments}) => {
-   
+const Comments = ({ comments }) => {
+
     const keys = Object.keys(comments) // extrai as chaves
 
     return (
         <div>
-            {keys.map( key => <Comment key={key} c={comments[key]}/>)}
+            {keys.map(key => <Comment key={key} c={comments[key]} />)}
         </div>
     )
 }

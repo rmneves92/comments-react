@@ -3,7 +3,7 @@ import App from './App'
 import { shallow } from 'enzyme'
 import Comments from './Comments'
 import NewComment from './NewComment'
-import {EventEmitter} from 'events'
+import { EventEmitter } from 'events'
 
 describe('<App />', () => {
     it('renders without crashing', () => {
@@ -68,7 +68,7 @@ describe('<App />', () => {
         database.ref.mockReturnValue(eventEmitter)
 
         const wrapper = shallow(<App database={database} />) // passando database como dependencia
-        
+
         // nao recebeu comments
         expect(wrapper.find(Comments).length).toBe(1)
         expect(wrapper.find(NewComment).length).toBe(1)
@@ -76,8 +76,8 @@ describe('<App />', () => {
 
         // recebendo o value
         const comments = {
-            'a': {comment: 'comment 1'},
-            'b': {comments: 'comment 2'}
+            'a': { comment: 'comment 1' },
+            'b': { comments: 'comment 2' }
         }
 
         const val = jest.fn()
@@ -95,7 +95,7 @@ describe('<App />', () => {
         expect(wrapper.find(Comments).get(0).props.comments).toBe(comments)
         expect(wrapper.find(NewComment).get(0).props.sendComment).toBe(wrapper.instance().sendComment)
         expect(wrapper.find('p').length).toBe(0) // deve retornar zero
-   
+
     })
 
 })
